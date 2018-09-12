@@ -8,7 +8,11 @@ import (
 
 //AI core structure
 type AI struct {
-	name string
+	name     string
+	language string
+	year     int32
+
+	confFile string
 }
 
 //Input functoin of AI.
@@ -30,7 +34,6 @@ func NewAI(name string) *AI {
 
 func main() {
 	stdin := bufio.NewScanner(os.Stdin)
-	//var ai *AI
 	ai := NewAI("Yui")
 	ai.greet()
 	for stdin.Scan() {
